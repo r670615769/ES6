@@ -1,4 +1,4 @@
-# ECMAScript 6 <sup>[git.io/es6features](http://git.io/es6features)</sup>
+# ECMAScript 6 <sup>[git.io/es6features](http://git.io/v3NPG)</sup>
 
 ## 介绍
 ECMAScript 6,2015年也被称为ECMAScript 标准的最新版本。标志着最新的语言，是及2009年ES5发布后相继6年出的版本。这些功能的实现主要的JavaScript引擎统计如右边链接(现在正在完善)(http://kangax.github.io/es5-compat-table/es6/)。
