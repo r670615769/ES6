@@ -1,7 +1,7 @@
 # ECMAScript 6 <sup>[git.io/v3NPG](http://git.io/v3NPG)</sup>
 
 ## 介绍
-ECMAScript 6,2015年也被称为ECMAScript 标准的最新版本。标志着最新的语言，是及2009年ES5发布后相继6年出的版本。这些功能的实现主要的JavaScript引擎统计如右边链接(现在正在完善)(http://kangax.github.io/es5-compat-table/es6/)。
+ECMAScript 6,2015年也被称为ECMAScript 标准的最新版本。标志着最新的语言，是及2009年ES5发布后相继6年出的版本。ES6的目标，是使得JavaScript语言可以用来编写大型的复杂的应用程序，成为企业级开发语言。这些功能的实现主要的JavaScript引擎统计如右边链接(现在正在完善)(http://kangax.github.io/es5-compat-table/es6/)。
 
 ES6的完整规范如左边网址下[ES6 standard](http://www.ecma-international.org/ecma-262/6.0/)。 
 
@@ -76,7 +76,7 @@ nums.forEach(v => {
 ### Classes
 ES6 classes are a simple sugar over the prototype-based OO pattern.  Having a single convenient declarative form makes class patterns easier to use, and encourages interoperability.  Classes support prototype-based inheritance, super calls, instance and static methods and constructors.
 
-ES6类是一个简单基于原型的面向对象模式。它以类模式声明,并鼓励互操作性。类支持基于原型的继承、超级调用实例和静态方法和构造函数。
+ES6类是一个简单基于原型的面向对象模式。它以类模式声明,并鼓励互操作性。类支持基于原型的继承、调用实例化静态方法和构造函数。
 
 ```JavaScript
 class SkinnedMesh extends THREE.Mesh {
@@ -169,7 +169,7 @@ obj = {
 ### Template Strings
 Template strings provide syntactic sugar for constructing strings.  This is similar to string interpolation features in Perl, Python and more.  Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks or constructing higher level data structures from string contents.
 
-模板构建字符串的字符串提供更简便的写法。这类似于字符串插值特性在Perl、Python和更多。可选地,可以添加一个标签允许自定义字符串建设,避免注入攻击或从字符串构造更高层次数据结构的内容。
+模板构建字符串的字符串提供更简便的写法。这类似于字符串插值特性在Perl、Python等。可选地,可以添加一个标签允许自定义字符串建设,避免注入攻击或重构数据结构。
 
 ```JavaScript
 // Basic literal string creation
@@ -289,7 +289,7 @@ h({ name: "bar", val: 42 })
 ### Default + Rest + Spread
 Callee-evaluated default parameter values.  Turn an array into consecutive arguments in a function call.  Bind trailing parameters to an array.  Rest replaces the need for `arguments` and addresses common cases more directly.
 
-Callee-evaluated默认参数值。把一个数组转化为连续函数调用的参数。剩余的参数绑定到一个数组中。其他取代了需要的参数和地址一般情况下更直接。
+Callee-evaluated默认参数值。把一个数组转化为连续函数调用的参数。剩余的参数绑定到一个数组中，将参数用省略号取代。
 
 ```JavaScript
 function f(x, y=12) {
@@ -335,7 +335,7 @@ var chars = [ ...str ] // [ "f", "o", "o" ]
 ### Let + Const
 Block-scoped binding constructs.  `let` is the new `var`.  `const` is single-assignment.  Static restrictions prevent use before assignment.
 
-Block-scoped绑定结构。let”是新的“var”。“常量”是单一赋值消息快。静态限制防止作业之前使用。
+Block-scoped绑定结构。let”是新的“var”。“常量”是单一赋值消息块。静态限制防止作业之前使用。
 
 ```JavaScript
 function f() {
@@ -372,7 +372,7 @@ PI > 3.0
 ### Iterators + For..Of
 Iterator objects enable custom iteration like CLR IEnumerable or Java Iterable.  Generalize `for..in` to custom iterator-based iteration with `for..of`.  Don’t require realizing an array, enabling lazy design patterns like LINQ.
 
-迭代器对象启用自定义迭代就像CLR IEnumerable或Java Iterable。概括的. .概括来说它就是将‘fo..in’等循环用‘for..of’来写。不需要实现一个数组,使懒惰像LINQ设计模式。
+迭代器对象启用自定义迭代就像CLR IEnumerable或Java Iterable。概括来说它就是将‘for..in’等循环用‘for..of’来写。不需要实现一个数组,使懒惰像LINQ设计模式。
 
 ```JavaScript
 let fibonacci = {
@@ -755,7 +755,7 @@ var handler =
 ### Symbols
 Symbols enable access control for object state.  Symbols allow properties to be keyed by either `string` (as in ES5) or `symbol`.  Symbols are a new primitive type. Optional `name` parameter used in debugging - but is not part of identity.  Symbols are unique (like gensym), but not private since they are exposed via reflection features like `Object.getOwnPropertySymbols`.
 
-符号启用访问控制对象状态。符号允许键属性的“string”(如ES5)或“symbol”。符号是一个新的原始类型。可选的“name”参数用于调试——但不是身份的一部分。符号是独一无二的(比如gensym),而不是个人,因为他们是通过反射特性,如“Object.getOwnPropertySymbols”。这是也是一个新功能。
+符号启用访问控制对象状态。符号允许键属性的“string”(ES5属性)或“symbol”。符号是一个新的原始类型。可选的“name”参数用于调试——但是不用于定义。符号是独一无二的(比如gensym),而不是个人,因为他们是通过反射特性,如“Object.getOwnPropertySymbols”。这是也是一个新功能。
 
 ```JavaScript
 var MyClass = (function() {

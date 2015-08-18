@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="traceur.js"></script>
+<script src="es6-bootstrap.js"></script>
+<script type="text/traceur">
+//let
+//     function f1() {
+//   var a = 8;
+//   let n = 5;
+//   if (true) {
+//       let n = 10;
+//       var a = 5
+//   }
+//   document.write(n); // 5
+//   document.write(a); // 20
+// }
+// f1();
+
+//let一次性
+ var a = [];
+    for (var i = 0; i < 10; i++) {
+      a[i] = function () {
+        document.write(i);
+      };
+    }
+   // a[6](); // 6
+</script>
+</head>
+<body>
+
+</body>
+</html>
